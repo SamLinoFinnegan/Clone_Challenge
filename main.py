@@ -5,6 +5,7 @@ import logging
 import logging.handlers
 
 
+# add the path to your project folder
 FULLPATH ="place/the/full/path/to/your/dir"
 handler = logging.handlers.WatchedFileHandler(os.path.join(FULLPATH,"main.log"))
 
@@ -71,6 +72,6 @@ if __name__ == "__main__":
     args = parse_arguments()
     clone_folder(args.path_origin, args.path_target)
     if args.time:
-        # add the path to your dir
+        # add the path to your project folder
         command = f"cd /home/Clone_Challange && /usr/bin/python3.10 main.py -PO {args.origin} -PT {args.target}"
         # cron_job(args.time, command)
