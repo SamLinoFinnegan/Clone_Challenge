@@ -1,0 +1,7 @@
+pytest
+argparse
+shutil
+logging
+unittest
+tempfile
+python-crontab
