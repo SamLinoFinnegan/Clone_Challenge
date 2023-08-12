@@ -3,9 +3,9 @@ import argparse
 import shutil
 import logging
 import logging.handlers
-# from crontab import CronTab
 
-FULLPATH ="C:/Users/samue/OneDrive/Ambiente de Trabalho/Projects/Practice/python/Clone_Challange/var/log"
+
+FULLPATH ="place/the/full/path/to/your/dir"
 handler = logging.handlers.WatchedFileHandler(os.path.join(FULLPATH,"main.log"))
 
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s", "%Y-%m-%d %H:%M:%S")
@@ -22,17 +22,17 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description="This argparser will take arguments to syncronize two folders")
     parser.add_argument("-PO", "--path_origin", required=True, type=str, help="Use the -PO flag for path of the origin folder.")
     parser.add_argument("-PT", "--path_target", required=True, type=str, help="Use the -PT flag for path of the target folder.")
-    # parser.add_argument("-t", "--time", nargs='?', const=0, type=str,help="Use the -c flag to set up your syncronization time, this is set in minutes")
+    parser.add_argument("-t", "--time", nargs='?', const=0, type=str,help="Use the -t flag to set up your syncronization time, this is set in minutes")
     return parser.parse_args()
 
-# def cron_job(time, command_input):
-#     """
-#     Funtion to create the cronjob, this function takes two parameters, time, and command
-#     Time should be inputed as minutes
-#     """
-#     with CronTab(user='root') as cron:
-#         job = cron.new(command=command_input)
-#         job.minute.every(time)
+def cron_job(time, command_input):
+    """
+    Funtion to create the cronjob, this function takes two parameters, time, and command
+    Time should be inputed as minutes
+    """
+    with CronTab(user='root') as cron:
+        job = cron.new(command=command_input)
+        job.minute.every(time)
 
 def clone_folder(path_origin, path_target):
     """
@@ -40,7 +40,8 @@ def clone_folder(path_origin, path_target):
     It takes in two arguments, path_origin and path_target
     """
     logging.info(f"Cloning files from {path_origin} to {path_target}")
-    
+
+    # remove the previous content from the target folder
     for target_file in os.listdir(path_target):
         target_path = os.path.join(path_target, target_file)
         if os.path.isdir(target_path):
