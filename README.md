@@ -25,11 +25,12 @@ Run the script from the command line with the following arguments:
 - `-t` or `--time`: Set up synchronization time in minutes (optional).
 
 Example:
-python main.py -PO /path/to/origin -PT /path/to/target -t 30
+"python main.py -PO /path/to/origin -PT /path/to/target"
 
 ## Automatic Synchronization (Cron Job)
 To set up a cron job for automatic synchronization, provide the `-t` flag with the desired synchronization interval in minutes. For example, the following command will run the script every 30 minutes:
-python main.py -PO /path/to/origin -PT /path/to/target -t 30
+
+"python main.py -PO /path/to/origin -PT /path/to/target -t 30"
 
 ## Logging
 The script logs its actions and errors to the `main.log` file located in the `var/log` directory.
