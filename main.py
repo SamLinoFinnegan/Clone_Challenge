@@ -22,7 +22,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description="This argparser will take arguments to syncronize two folders")
     parser.add_argument("-PO", "--path_origin", required=True, type=str, help="Use the -PO flag for path of the origin folder.")
     parser.add_argument("-PT", "--path_target", required=True, type=str, help="Use the -PT flag for path of the target folder.")
-    # parser.add_argument("-t", "--time", type=str,help="Use the -c flag to set up your syncronization time, this is set in minutes")
+    # parser.add_argument("-t", "--time", nargs='?', const=0, type=str,help="Use the -c flag to set up your syncronization time, this is set in minutes")
     return parser.parse_args()
 
 # def cron_job(time, command_input):
