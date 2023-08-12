@@ -71,5 +71,6 @@ if __name__ == "__main__":
     args = parse_arguments()
     clone_folder(args.path_origin, args.path_target)
     if args.time:
+        # add the path to your dir
         command = f"cd /home/Clone_Challange && /usr/bin/python3.10 main.py -PO {args.origin} -PT {args.target}"
         # cron_job(args.time, command)
