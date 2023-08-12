@@ -13,10 +13,10 @@ Clone_Script is a Python script that synchronizes two folders by copying the con
 
 ## Installation
 1. Clone the repository.
-2. Install the required packages using the following command:
-   > "pip install -r requirements.txt"
-3. Start the virtual env with the following command:
-  > "venv\Scripts\activate"
+2. Install the required packages using the following command.
+> "pip install -r requirements.txt"
+3. Start the virtual env with the following command.
+> "venv\Scripts\activate"
 
 ### Note
 Before you start using the tool, make sure to open the main.py and add the correct paths, lines 9 and 73
