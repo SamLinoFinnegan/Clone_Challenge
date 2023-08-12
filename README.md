@@ -1,4 +1,4 @@
-# Clone_Challenge
+# Clone_Script
 
 ## Overview
 Clone_Challenge is a Python script that synchronizes two folders by copying the contents of one folder to another. It also provides an option to set up a cron job for automatic synchronization at specified intervals.
