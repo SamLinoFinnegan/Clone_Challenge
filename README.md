@@ -38,3 +38,4 @@ The script logs its actions and errors to the `main.log` file located in the `va
 ## Note
 - Be cautious when using automatic synchronization with a cron job. Make sure to test it thoroughly in a safe environment before deploying it to production.
 - Always double-check paths and configurations before setting up cron jobs.
+- This Script is designed to make exact copies of two folders, so have in mind that whatever was previously in the target folder will be automatically deleted
