@@ -14,9 +14,9 @@ Clone_Script is a Python script that synchronizes two folders by copying the con
 ## Installation
 1. Clone the repository.
 2. Install the required packages using the following command.
-> "pip install -r requirements.txt"
+> pip install -r requirements.txt
 3. Start the virtual env with the following command.
-> "venv\Scripts\activate"
+> venv\Scripts\activate
 
 ### Note
 Before you start using the tool, make sure to open the main.py and add the correct paths, lines 9 and 73
@@ -28,12 +28,12 @@ Run the script from the command line with the following arguments:
 - `-t` or `--time`: Set up synchronization time in minutes (optional).
 
 Example:
-> "python main.py -PO /path/to/origin -PT /path/to/target"
+> python main.py -PO /path/to/origin -PT /path/to/target
 
 ## Automatic Synchronization (Cron Job)
 To set up a cron job for automatic synchronization, provide the `-t` flag with the desired synchronization interval in minutes. For example, the following command will run the script every 30 minutes:
 
-> "python main.py -PO /path/to/origin -PT /path/to/target -t 30"
+> python main.py -PO /path/to/origin -PT /path/to/target -t 30
 
 ## Logging
 The script logs its actions and errors to the `main.log` file located in the `var/log` directory.
